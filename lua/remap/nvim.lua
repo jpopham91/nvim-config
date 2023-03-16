@@ -6,3 +6,14 @@ vim.keymap.set('n', 'j', 'h') -- j = left
 vim.keymap.set('n', 'l', 'l') -- l = right
 vim.keymap.set('n', 'h', 'k') -- h = up
 vim.keymap.set('n', 'k', 'j') -- k = down
+
+-- disable arrow keys
+function no()
+  print('STAHP!')
+  return '<nop>'
+end
+
+vim.keymap.set('n', '<Up>', no)
+vim.keymap.set('n', '<Down>', no)
+vim.keymap.set('n', '<Left>', no)
+vim.keymap.set('n', '<Right>', no)
