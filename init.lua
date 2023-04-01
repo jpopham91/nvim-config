@@ -1,6 +1,8 @@
 require('plugins')
 require('remap.nvim')
 require('remap.telescope')
+require('config.treesitter')
+require('config.lsp')
 
 vim.cmd.set('nu', 'rnu')
 
