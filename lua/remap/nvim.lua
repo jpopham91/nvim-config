@@ -27,3 +27,5 @@ vim.keymap.set('x', '<Up>', no)
 vim.keymap.set('x', '<Down>', no)
 vim.keymap.set('x', '<Left>', no)
 vim.keymap.set('x', '<Right>', no)
+
+vim.g.copilot_no_tab_map = true vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
