@@ -1,3 +1,9 @@
+-- Google specific stuffs
+local gconf = '/usr/share/vim/google/google.vim'
+if vim.fn.filereadable(gconf) then
+	vim.cmd('source ' .. gconf)
+end
+
 require('plugins')
 require('remap.nvim')
 require('remap.telescope')
