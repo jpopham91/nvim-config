@@ -32,8 +32,11 @@ return require('packer').startup(function(use)
     {'hrsh7th/cmp-buffer'},       -- Optional
     {'hrsh7th/cmp-path'},         -- Optional
     {'hrsh7th/cmp-nvim-lua'},     -- Optional
-  }
-}
+  }}
+
+  use { "onsails/lspkind.nvim" }
+  use { "neovim/nvim-lspconfig" }
+  use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons"}
 
 end)
 

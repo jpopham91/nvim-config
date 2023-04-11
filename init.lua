@@ -1,14 +1,22 @@
 -- Google specific stuffs
-local gconf = '/usr/share/vim/google/google.vim'
-if vim.fn.filereadable(gconf) then
+gconf = '/usr/share/vim/google/google.vim'
+google = vim.fn.filereadable(gconf)
+if google then
 	vim.cmd('source ' .. gconf)
 end
-
+ 
 require('plugins')
 require('remap.nvim')
 require('remap.telescope')
 require('config.treesitter')
 require('config.lsp')
+
+if google then
+	require('google.lsp')
+	require('google.diagnostics')
+end
+
+vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 
 vim.cmd.set('nu', 'rnu')
 
