@@ -32,6 +32,7 @@ return require('packer').startup(function(use)
     {'hrsh7th/cmp-buffer'},       -- Optional
     {'hrsh7th/cmp-path'},         -- Optional
     {'hrsh7th/cmp-nvim-lua'},     -- Optional
+    {'hrsh7th/vim-vsnip'},        -- Optional
   }}
 
   use { "onsails/lspkind.nvim" }
