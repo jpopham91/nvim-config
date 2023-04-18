@@ -3,6 +3,7 @@ gconf = '/usr/share/vim/google/google.vim'
 google = vim.fn.filereadable(gconf)
 if google then
 	vim.cmd('source ' .. gconf)
+	print("Using google.vim")
 end
  
 require('plugins')
@@ -14,6 +15,10 @@ require('config.lsp')
 if google then
 	require('google.lsp')
 	require('google.diagnostics')
+	vim.cmd('Glug codefmt')
+	vim.cmd('Glug codefmt-google')
+	vim.cmd('autocmd FileType python AutoFormatBuffer pyformat')
+	vim.cmd('autocmd FileType bzl AutoFormatBuffer buildifier')
 end
 
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
