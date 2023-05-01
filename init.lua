@@ -36,3 +36,6 @@ vim.o.shiftwidth = 4
 
 -- scrolling
 vim.opt.scrolloff = 8
+
+-- set working directory to starting loc
+vim.cmd('cd %:p:h')
